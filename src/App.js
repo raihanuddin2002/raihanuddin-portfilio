@@ -2,11 +2,16 @@ import './App.css';
 import Header from './components/Header/Header';
 import { BrowserRouter,Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
+import { useState } from 'react';
 
 function App() {
+  const [isLoading,setIsLoading] = useState(false);
+
   return (
     <div className="App">
-      <BrowserRouter>
+      
+        <BrowserRouter>
+        
         <Header></Header>
         <Switch>
 
@@ -25,7 +30,6 @@ function App() {
         </Switch>
 
       </BrowserRouter>
-
     </div>
   );
 }
