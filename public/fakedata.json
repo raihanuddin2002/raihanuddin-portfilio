@@ -7,7 +7,8 @@
         "site":"https://apple-bd.web.app/",
         "clientCode":"https://github.com/raihanuddin2002/apple-bd",
         "serverCode":"https://github.com/raihanuddin2002/apple-bd-server",
-        "type":"Full stack Project (MERN)",
+        "code":"",
+        "type":"MERN",
         "picture":"https://alif-my-portfolio.netlify.app/static/media/hot-onion.b570edf1.png",
         "category":"Apple Shop",
         "technologies": "html 5,css 3,react,bootstrap 5,express,mongoDB,firebase authentication,react router,Heroku"
@@ -20,46 +21,41 @@
         "site":"https://travellerbd-dd1c0.web.app/",
         "clientCode":"https://github.com/raihanuddin2002/traveler-bd-client-side",
         "serverCode":"https://github.com/raihanuddin2002/traveler-bd-server",
-        "type":"Full stack Project (MERN)",
+        "code":"",
+        "type":"MERN",
         "picture":"https://alif-my-portfolio.netlify.app/static/media/hot-onion.b570edf1.png",
         "category":"Travel Agency",
         "technologies": "html 5,css 3,react,bootstrap 5,express,mongoDB,firebase authentication,react router,Heroku"
     },
     {
         "count": "3",
-        "name":"Traveler BD",
+        "name":"R HOSPITAL",
         "display": "true",
-        "description":{
-            "one":"Tour based website where users can find best packages in online.",
-            "two":"They can order packages and they can also delete their orders.",
-            "three":"Admin can approve any orders and if he want he can also cancel anyone's order"
-        },
-        "site":"https://travellerbd-dd1c0.web.app/",
-        "client-code":"https://github.com/raihanuddin2002/traveler-bd-client-side",
+        "description": "We are here to help these people who want to buy apple mobiles. This is virtual service people can easily order products and cancel their order.This has an admin panel normal users can see their orders. they can give review. Admin users can do all normal users can do and also manage all orders , Add new service, Make someone admin.",
+        "site":"https://r-hospital-2002.web.app/",
+        "client-code":"https://github.com/raihanuddin2002/r-hospital",
+        "code":"",
         "server-code":"https://github.com/raihanuddin2002/traveler-bd-server",
-        "type":"Full stack Project (MERN)",
+        "type":"REACT",
         "picture":"https://alif-my-portfolio.netlify.app/static/media/hot-onion.b570edf1.png",
-        "category":"Travel Agency",
-        "technologies": "html 5,css 3,react,bootstrap 5,express,mongoDB,firebase authentication,react router,Heroku"
+        "category":"online hospital",
+        "technologies": "html 5,css 3,react,bootstrap 5,firebase,react router"
         
 
     },
     {
         "count": "4",
-        "name":"Traveler BD",
+        "name":"SS CHAT",
         "display": "true",
-        "description":{
-            "one":"Tour based website where users can find best packages in online.",
-            "two":"They can order packages and they can also delete their orders.",
-            "three":"Admin can approve any orders and if he want he can also cancel anyone's order"
-        },
-        "site":"https://travellerbd-dd1c0.web.app/",
-        "client-code":"https://github.com/raihanuddin2002/traveler-bd-client-side",
-        "server-code":"https://github.com/raihanuddin2002/traveler-bd-server",
-        "type":"Full stack Project (MERN)",
+        "description": "We are here to help these people who want to buy apple mobiles. This is virtual service people can easily order products and cancel their order.This has an admin panel normal users can see their orders. they can give review. Admin users can do all normal users can do and also manage all orders , Add new service, Make someone admin.",
+        "site":"https://raihanuddin2002.xyz/",
+        "client-code":"",
+        "server-code":"",
+        "code":"https://github.com/raihanuddin2002/SS-Chat",
+        "type":"PHP",
         "picture":"https://alif-my-portfolio.netlify.app/static/media/hot-onion.b570edf1.png",
-        "category":"Travel Agency",
-        "technologies": "html 5,css 3,react,bootstrap 5,express,mongoDB,firebase authentication,react router,Heroku"
+        "category":"Real time chat application",
+        "technologies": "html 5,css 3,bootstrap 5,jquery,php,mysql,ajax,cpanel"
     }
     
 ]

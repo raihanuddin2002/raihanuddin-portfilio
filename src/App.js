@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import { BrowserRouter,Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import { useEffect, useState } from 'react';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [isLoading,setIsLoading] = useState(false);
@@ -11,7 +12,7 @@ function App() {
 
     setTimeout( () => {
       setIsLoading(false);
-    },4000)
+    },2000)
   },[])
 
   return (
@@ -42,6 +43,7 @@ function App() {
 
         </Switch>
 
+          <Footer></Footer>
       </BrowserRouter>}
     </div>
   );

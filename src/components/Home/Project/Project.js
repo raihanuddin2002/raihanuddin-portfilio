@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Project = (props) => {
-    const {name, description,site,clientCode,serverCode,type,picture,category,technologies}= props.data;
+    const {name, description,site,clientCode,serverCode,code,type,picture,category,technologies}= props.data;
     const tech = technologies.split(',');
     const key = Math.random() * Math.random();
 
@@ -36,6 +36,7 @@ const Project = (props) => {
                                     {site && <a href={site} target="_blank"><button className="btn bg-light-green me-1 mb-1"><i className="fas fa-podcast"></i> Live site</button></a>}
                                     {clientCode && <a href={clientCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i className="fab fa-github"></i> Client Code</button></a>}
                                     {serverCode && <a href={serverCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i className="fab fa-github"></i> Server Code</button></a>}
+                                    {code && <a href={code} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i className="fab fa-github"></i> Code</button></a>}
                                 </div>
                             </div>
                         </div>
@@ -47,13 +48,3 @@ const Project = (props) => {
 };
 
 export default Project;
-
-{/* <div className="projects-container">
-                        <img className="img-fluid project-img" src={picture} alt="" />
-                        <div className="project-heading d-flex justify-content-center align-items-center">
-                            <h2 className="text-uppercase">{name}</h2>
-                        </div>
-                    </div> */}
-                    // <div className="project-heading d-flex justify-content-center align-items-center">
-                    //         <h2 className="text-uppercase">HEY</h2>
-                    //     </div>
