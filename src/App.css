@@ -219,10 +219,7 @@ a:hover{
     font-size: 16px !important;
   }
   .social-links{
-    position: fixed;
-    top: 80px;
-    display: flex;
-    justify-content: center;
+   display: none;
   }
   .social-links p{
     margin-right: 10px;
@@ -265,6 +262,6 @@ a:hover{
   .social-links{
     position: fixed;
     top: 200px;
-    left: 20px;
+    left: 10px;
   }
 }

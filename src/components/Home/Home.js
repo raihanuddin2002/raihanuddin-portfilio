@@ -388,7 +388,17 @@ const Home = () => {
 									<div><i className="fa fa-map-marker text-light-green"></i> <span><strong>Parmanent Address</strong>: Kaliganj,Jhenidah,Khulna,Bangladesh</span></div>
 									<div><i className="fa fa-user text-light-green"></i> <span><strong>Phone:</strong> +8801998306511,+8801879323625</span></div>
 									<div><i className="fa fa-envelope text-light-green"></i> <span><strong>Email</strong>: <a className="text-light-green" href="mailto:raihanuddin2002@gmail.com">raihanuddin2002@gmail.com</a></span></div>
+                                    
+
 									<div><i className="fa fa-globe text-light-green"></i> <span><strong>Web</strong>: <a className="text-light-green" href="#" data-placement="bottom" data-toggle="tooltip" title="www.raihanuddin2002.xyz">www.raihanuddin2002.xyz</a></span></div>
+
+                                    <div className="social mt-2 d-flex">
+                                        <a href="https://web.facebook.com/rehan.raihan2002/" target="_blank" rel="noreferrer"><p className="me-2"><i className="fab fa-facebook-square text-light-green fs-3"></i></p></a>
+                                        <a href="https://www.linkedin.com/in/raihanuddin2002/" target="_blank" rel="noreferrer"><p className="me-2"><i className="fab fa-linkedin text-light-green fs-3"></i></p></a>
+                                        <a href="https://twitter.com/raihanuddin2002" target="_blank" rel="noreferrer"><p className="me-2"><i className="fab fa-twitter-square text-light-green fs-3"></i></p></a>
+                                        <a href="https://github.com/raihanuddin2002" target="_blank" rel="noreferrer"><p className="me-2"><i className="fab fa-github-square text-light-green fs-3"></i></p></a>
+                                        <a href="https://join.skype.com/invite/Du5Wj9vyXR4O" target="_blank" rel="noreferrer"><p className="me-2"><i className="fab fa-skype text-light-green fs-3"></i></p></a>
+                                    </div>
 								</div>
                             </div>
                         </div>
