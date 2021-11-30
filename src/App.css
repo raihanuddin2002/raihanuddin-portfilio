@@ -124,7 +124,8 @@ a:hover{
 .p-absolute{
   height: 40vh;
   width: 100%;
-  background-color: #8cbe4663;
+  /* background-color: #8cbe4663; */
+  background-color: rgba(0, 0, 0, 0.507);
   position: absolute;
   z-index: 2;
   top: 0px;

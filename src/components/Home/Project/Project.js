@@ -32,10 +32,10 @@ const Project = (props) => {
                             </div>
                             <div className="site-info text-center">
                                 <div className="site-info-buttons position-absoulte bottom-0">
-                                    <a href="#" target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1">Details</button></a>
-                                    {site && <a href={site} target="_blank"><button className="btn bg-light-green me-1 mb-1">Live site</button></a>}
-                                    {clientCode && <a href={clientCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1">Client Code</button></a>}
-                                    {serverCode && <a href={serverCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1">Server Code</button></a>}
+                                    <a href="#" target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i class="fas fa-info-circle"></i> Details </button></a>
+                                    {site && <a href={site} target="_blank"><button className="btn bg-light-green me-1 mb-1"><i class="fas fa-podcast"></i> Live site</button></a>}
+                                    {clientCode && <a href={clientCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i class="fab fa-github"></i> Client Code</button></a>}
+                                    {serverCode && <a href={serverCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i class="fab fa-github"></i> Server Code</button></a>}
                                 </div>
                             </div>
                         </div>
