@@ -168,11 +168,11 @@ const Home = () => {
                                 Programming is my passion. I always look for challenges where I can use my potential at most and always love to work on cutting edge technologies.  
                                 </p>
                                 <div className="list_style">
-                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="500"><i className="fas fa-check-circle text-light-green"></i> Donec convallis, metus nec tempus aliquet</div>
-                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="600"><i className="fas fa-check-circle text-light-green"></i> Aenean commodo ligula eget dolor</div>
-                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="700"><i className="fas fa-check-circle text-light-green"></i> Lorem ipsum dolor sit amet cons adipiscing</div>
-                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="800"><i className="fas fa-check-circle text-light-green"></i> Nunc aliquet tincidunt metus sit amet</div>
-                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="900"><i className="fas fa-check-circle text-light-green"></i> Accumsan vulputate faucibus turpis dictum</div>
+                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="500"><i className="fas fa-check-circle text-light-green"></i> Best effort for client satisfaction</div>
+                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="600"><i className="fas fa-check-circle text-light-green"></i> Friendly Communication</div>
+                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="700"><i className="fas fa-check-circle text-light-green"></i> Clean code with valuable comments</div>
+                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="800"><i className="fas fa-check-circle text-light-green"></i> To Provide Quality Services</div>
+                                        <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="900"><i className="fas fa-check-circle text-light-green"></i> Guarantee the promise of maintaining the trust of the customer</div>
                                     </div>
                             </div>
                             <div className="col-lg-6" data-aos="fade-down" data-aos-duration="1000">
