@@ -16,12 +16,6 @@ const Home = () => {
     useEffect( () => {
         AOS.init();
     });
-    let style ={
-
-    }
-    function scrollTopButton(){
-        console.log(window.innerHeight)
-    }
 
     // Projects
     useEffect( () => {
@@ -331,7 +325,7 @@ const Home = () => {
                 <section className="fw-monospace my-5" id="contact">
                     <div className="container">
                         <div className="row sub_content">
-                            <div className="col-lg-6 mb-5">
+                            <div className="col-lg-6 mb-5" data-aos="fade-right" data-aos-duration="1000">
                                 <div className="dividerHeading mb-3">
                                     <h4 className="fs-3"><span>GET IN TOUCH</span></h4>
                                     <div className="divider"><div className="color-nowidth"><div className="color-width"></div></div></div>
@@ -379,12 +373,12 @@ const Home = () => {
                                     </form>
                                     {
                                         
-                                        successMessage && <div className="alert alert-success mt-3" role="alert"><i class="far fa-check-circle text-light-green"></i>         Message Send Successfully</div>
+                                        successMessage && <div className="alert alert-success mt-3" role="alert"><i className="far fa-check-circle text-light-green"></i> Message Send Successfully</div>
                                     }
                                 </div>
                             </div>
 
-                            <div className="col-lg-6">
+                            <div className="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
                                 <div className="dividerHeading mb-3">
                                     <h4 className="fs-3"><span>CONTACT INFO</span></h4>
                                     <div className="divider mb-3"><div className="color-nowidth"><div className="color-width"></div></div></div>
@@ -413,7 +407,7 @@ const Home = () => {
                 </section>
                          {/* scroll top section */}
                 <div className="scrollTop">
-                    <a href="#hero-section"><button style={style} onScroll={scrollTopButton} className="btn bg-light-green"><i class="fas fa-arrow-alt-circle-up"></i></button></a>
+                    <a href="#hero-section"><button className="btn bg-light-green"><i className="fas fa-arrow-alt-circle-up"></i></button></a>
                 </div>
             </div> {/* for scroll top */}
             

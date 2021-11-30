@@ -2,15 +2,28 @@ import './App.css';
 import Header from './components/Header/Header';
 import { BrowserRouter,Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [isLoading,setIsLoading] = useState(false);
+  useEffect( () => {
+    setIsLoading(true);
+
+    setTimeout( () => {
+      setIsLoading(false);
+    },4000)
+  },[])
 
   return (
     <div className="App">
-      
-        <BrowserRouter>
+        {
+          isLoading && <div style={{height: '100vh'}} className="d-flex justify-content-center align-items-center">
+              <div className="spinner-border p-5 text-light-green" role="status">
+                  <span className="visually-hidden">Loading...</span>
+              </div>
+          </div>
+        }
+        {!isLoading && <BrowserRouter>
         
         <Header></Header>
         <Switch>
@@ -29,7 +42,7 @@ function App() {
 
         </Switch>
 
-      </BrowserRouter>
+      </BrowserRouter>}
     </div>
   );
 }

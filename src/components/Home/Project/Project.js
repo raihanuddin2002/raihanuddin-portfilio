@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 const Project = (props) => {
     const {name, description,site,clientCode,serverCode,type,picture,category,technologies}= props.data;
     const tech = technologies.split(',');
-    // const key = Math.random();
+    const key = Math.random() * Math.random();
 
     useEffect( () => {
         AOS.init();
@@ -27,15 +27,15 @@ const Project = (props) => {
                             <h2 className="text-uppercase text-center mb-4 pt-3">technologies</h2>
                             <div className="text-center mb-4">
                                 {
-                                    tech.map(e => <button className="btn bg-light-green me-1 mb-1">{e}</button> )
+                                    tech.map(e => <button key={key} className="btn bg-light-green me-1 mb-1">{e}</button> )
                                 }
                             </div>
                             <div className="site-info text-center">
                                 <div className="site-info-buttons position-absoulte bottom-0">
-                                    <a href="#" target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i class="fas fa-info-circle"></i> Details </button></a>
-                                    {site && <a href={site} target="_blank"><button className="btn bg-light-green me-1 mb-1"><i class="fas fa-podcast"></i> Live site</button></a>}
-                                    {clientCode && <a href={clientCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i class="fab fa-github"></i> Client Code</button></a>}
-                                    {serverCode && <a href={serverCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i class="fab fa-github"></i> Server Code</button></a>}
+                                    <a href="#" target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i className="fas fa-info-circle"></i> Details </button></a>
+                                    {site && <a href={site} target="_blank"><button className="btn bg-light-green me-1 mb-1"><i className="fas fa-podcast"></i> Live site</button></a>}
+                                    {clientCode && <a href={clientCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i className="fab fa-github"></i> Client Code</button></a>}
+                                    {serverCode && <a href={serverCode} target="_blank" rel="noreferrer"><button className="btn bg-light-green me-1 mb-1"><i className="fab fa-github"></i> Server Code</button></a>}
                                 </div>
                             </div>
                         </div>

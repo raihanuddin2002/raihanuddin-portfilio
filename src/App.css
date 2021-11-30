@@ -47,6 +47,9 @@ html {
 .text-light-green2{
   color: #82C91E;
 }
+::selection{
+  background: #8CBE46;
+}
 a{
   text-decoration: none;
 }
