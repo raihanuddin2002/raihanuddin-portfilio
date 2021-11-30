@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 const Project = (props) => {
     const {name, description,site,clientCode,serverCode,type,picture,category,technologies}= props.data;
     const tech = technologies.split(',');
-    const key = Math.random();
+    // const key = Math.random();
 
     useEffect( () => {
         AOS.init();
@@ -27,7 +27,7 @@ const Project = (props) => {
                             <h2 className="text-uppercase text-center mb-4 pt-3">technologies</h2>
                             <div className="text-center mb-4">
                                 {
-                                    tech.map(e => <button key={key} className="btn bg-light-green me-1 mb-1">{e}</button> )
+                                    tech.map(e => <button className="btn bg-light-green me-1 mb-1">{e}</button> )
                                 }
                             </div>
                             <div className="site-info text-center">

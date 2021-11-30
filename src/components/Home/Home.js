@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Typewriter from "typewriter-effect";
 import appleImage from "../../images/apple-devices-2.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Project from './Project/Project';
+import emailjs from "emailjs-com";
 const Home = () => {
     const [projects, setProjects] = useState([]);
     const limitProjects = projects.filter(project => project.display === "true");
     const [isLoading, setIsLoading] = useState(true);
+    const [isSend, setIssend] = useState(false);
+    const [successMessage, setSuceeessMessage] = useState(false);
 
     // Animation
     useEffect( () => {
@@ -23,10 +26,41 @@ const Home = () => {
             if(data){
                 setProjects(data);
                 setIsLoading(false);
+               
             }
         })
     },[]);
+    const myForm = useRef();
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const subjectRef = useRef();
+    const messageRef = useRef();
 
+    // Send email
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIssend(true);
+
+        const name = nameRef.current.value;
+        const email = emailRef.current.value;
+        const subject = subjectRef.current.value;
+        const message = messageRef.current.value;
+
+        const send = {
+            name,email,subject,message
+        }
+        emailjs.sendForm('raihanuddin2002', 'template_o3yzdon', myForm.current, 'user_RNXtqEf9TfveLEwvvAup1')
+            .then((result) => {
+                setIssend(false);
+                setSuceeessMessage(true);
+                setTimeout( () => {
+                    setSuceeessMessage(false);
+                },3000)
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+    }
     
     return (
         <div>
@@ -111,7 +145,7 @@ const Home = () => {
                                !isLoading && limitProjects.map(project => <Project key={project.count} data={project}></Project>)
                             }
                         </div>
-                        {
+                            {
                                 isLoading && <div className="d-flex justify-content-center my-5">
                                     <div className="spinner-border p-5 text-light-green" role="status">
                                         <span className="visually-hidden">Loading...</span>
@@ -298,38 +332,49 @@ const Home = () => {
                             </div>
                             
                             <div>
-                            <form onSubmit id="contactForm" action="" noValidate="novalidate">
-                                <div className="row">
-                                    <div className="form-group">
-                                        <div className="col-12 mb-2">
-                                            <input type="text" id="name" name="name" className="form-control" maxLength="100" data-msg-required="Please enter your name." value="" placeholder="Your Name" />
-                                        </div>
-                                        <div className="col-12 mb-2">
-                                            <input type="email" id="email" name="email" className="form-control" maxLength="100" data-msg-email="Please enter a valid email address." data-msg-required="Please enter your email address." value="" placeholder="Your E-mail" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row mb-2">
-                                    <div className="form-group">
-                                        <div className="col-md-12">
-                                            <input type="text" id="subject" name="subject" className="form-control" maxLength="100" data-msg-required="Please enter the subject." value="" placeholder="Subject"/>
+                                <form ref={myForm} onSubmit={sendEmail} id="contactForm" action="">
+                                    <div className="row">
+                                        <div className="form-group">
+                                            <div className="col-12 mb-2">
+                                                <input ref={nameRef} type="text" id="name" name="name" className="form-control" maxLength="100" data-msg-required="Please enter your name."  placeholder="Your Name" required/>
+                                            </div>
+                                            <div className="col-12 mb-2">
+                                                <input  ref={emailRef} type="email" id="email" name="email" className="form-control" maxLength="100" data-msg-email="Please enter a valid email address." data-msg-required="Please enter your email address."placeholder="Your E-mail" required/>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="row">
-                                    <div className="form-group">
-                                        <div className="col-md-12 mb-3">
-                                            <textarea id="message" className="form-control" name="message" rows="10" cols="50" data-msg-required="Please enter your message." maxLength="5000" placeholder="Message"></textarea>
+                                    <div className="row mb-2">
+                                        <div className="form-group">
+                                            <div className="col-md-12">
+                                                <input ref={subjectRef} type="text" id="subject" name="subject" className="form-control" maxLength="100" data-msg-required="Please enter the subject." placeholder="Subject" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group">
+                                            <div className="col-md-12 mb-3">
+                                                <textarea ref={messageRef} id="message" className="form-control" name="message" rows="10" cols="50" data-msg-required="Please enter your message." maxLength="5000" placeholder="Message"></textarea>
 
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-12">
-                                        <button className="btn btn-lg bg-light-green rounded-0" type="submit">SEND <i className="fas fa-paper-plane"></i></button>
+                                    <div className="row">
+                                        <div className="col-sm-12">
+                                            {!isSend && <button className="btn btn-lg bg-light-green rounded-0" type="submit">SEND <i className="fas fa-paper-plane"></i></button>}
+                                            {
+                                                isSend && <div>
+                                                    <div className="spinner-border p-4 text-light-green" role="status">
+                                                        <span className="visually-hidden">Loading...</span>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                                {
+                                    
+                                    successMessage && <div className="alert alert-success mt-3" role="alert"><i class="far fa-check-circle text-light-green"></i>         Message Send Successfully</div>
+                                }
                             </div>
                         </div>
 
@@ -337,11 +382,11 @@ const Home = () => {
                             <div className="dividerHeading mb-3">
                                 <h4 className="fs-3"><span>CONTACT INFO</span></h4>
                                 <div className="divider mb-3"><div className="color-nowidth"><div className="color-width"></div></div></div>
-                                <p>You can contact me in these details. You can also serach by my username. You will find me in google.My username is "raihanuddin2002". </p>
+                                <p>You can contact me in these details. You can also serach by my username. You will find me in google. My username is "raihanuddin2002". </p>
 								<div className="widget_info_contact">
 									<div><i className="fa fa-map-marker text-light-green"></i> <span><strong>Present Address</strong>: Road-24,Uttara-7,Dhaka,Bangladesh</span></div>
 									<div><i className="fa fa-map-marker text-light-green"></i> <span><strong>Parmanent Address</strong>: Kaliganj,Jhenidah,Khulna,Bangladesh</span></div>
-									<div><i className="fa fa-user text-light-green"></i> <span><strong>Phone</strong>+8801998306511,+8801879323625</span></div>
+									<div><i className="fa fa-user text-light-green"></i> <span><strong>Phone:</strong> +8801998306511,+8801879323625</span></div>
 									<div><i className="fa fa-envelope text-light-green"></i> <span><strong>Email</strong>: <a className="text-light-green" href="mailto:raihanuddin2002@gmail.com">raihanuddin2002@gmail.com</a></span></div>
 									<div><i className="fa fa-globe text-light-green"></i> <span><strong>Web</strong>: <a className="text-light-green" href="#" data-placement="bottom" data-toggle="tooltip" title="www.raihanuddin2002.xyz">www.raihanuddin2002.xyz</a></span></div>
 								</div>
@@ -349,7 +394,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                
             </section>
         </div>
     );
