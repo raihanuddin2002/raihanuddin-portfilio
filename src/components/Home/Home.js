@@ -339,7 +339,7 @@ const Home = () => {
                                 </div>
                                 
                                 <div>
-                                    <form ref={myForm} onSubmit={sendEmail} id="contact" action="">
+                                    <form ref={myForm} onSubmit={sendEmail} action="">
                                         <div className="row">
                                             <div className="form-group">
                                                 <div className="col-12 mb-2">
@@ -412,6 +412,7 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
+                <div id="contact"></div>
                          {/* scroll top section */}
                 <div className="scrollTop">
                     <a href="#hero-section"><button className="btn bg-light-green"><i className="fas fa-arrow-alt-circle-up"></i></button></a>
