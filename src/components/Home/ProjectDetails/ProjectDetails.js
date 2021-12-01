@@ -96,9 +96,17 @@ const ProjectDetails = () => {
                             {screenshorts[2] && <div className="carousel-item">
                                 <a href={screenshorts[2]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[2]} className="d-block mx-auto img-fluid" alt="..."/></a>
                             </div>}
-                            {screenshorts[3] && <div className="carousel-item">
-                                <a href={screenshorts[3]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[3]} className="d-block mx-auto img-fuild" alt="..."/></a>
+
+                            {screenshorts[4] && <div className="carousel-item">
+                                <a href={screenshorts[4]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[4]} className="d-block mx-auto img-fluid" alt="..."/></a>
                             </div>}
+                            {screenshorts[5] && <div className="carousel-item">
+                                <a href={screenshorts[5]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[5]} className="d-block mx-auto img-fluid" alt="..."/></a>
+                            </div>}
+                            {screenshorts[6] && <div className="carousel-item">
+                                <a href={screenshorts[6]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[6]} className="d-block mx-auto img-fluid" alt="..."/></a>
+                            </div>}
+                            
                             {picture && <div className="carousel-item">
                                 <a href={picture} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={picture} className="d-block mx-auto img-fluid" alt="..."/></a>
                             </div>}
