@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Project from './Project/Project';
 import emailjs from "emailjs-com";
+import { NavLink } from 'react-router-dom';
 const Home = () => {
     const [projects, setProjects] = useState([]);
     const limitProjects = projects.filter(project => project.display === "true");
@@ -122,7 +123,13 @@ const Home = () => {
                             </div>
                             <p>
                                 I am a Jr Web Developer. I am a fresher in MERN stack. Recently I have finished MERN stack Course at Programming Hero. I am in web sector since 2018. I started my journey as a WordPress developer. Then I started learning PHP. After finishing PHP course then I got admission at Programming Hero and started learning MERN stack. I worked 3 small professional projects, 2 of projects in local marketplace and 1 project in Fiverr.
-                                </p>
+                            </p>
+
+                            <div className="pb_action" data-aos="zoom-in"  data-aos-duration="1000" >
+                                <NavLink className="btn bg-light-green rounded-0 text-uppercase" to="/about">
+                                    Read More <i class="fas fa-info-circle"></i>
+                                </NavLink>
+                            </div>
                         </div>
                         <div className="col-12 col-lg-6 text-center" data-aos="fade-down" data-aos-duration="1000"  data-aos-duration="1000" >
                             <img src={appleImage} className="about-image img-fluid" alt="raihanuddin2002 -web developer - sleeping-sagacity" />
@@ -130,14 +137,14 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <div className="for-scroll-top">
+            <div className="for-scroll-top mb-2">
                 {/* Projects */}
                 <section className="fw-monospace my-5">
                     <div className="container">
                         <div className="row">
                             <div className="dividerHeading">
                                 <h4 className="fs-3"><span>PROJECTS</span></h4>
-                                <div className="divider"><div className="color-nowidth"><div className="color-width"></div></div></div>
+                                <div style={{background:'none'}} className="divider"><div className="color-nowidth"><div className="color-width"></div></div></div>
                             </div>
 
                             <div className="row row-cols-1 row-cols-md-2 g-4 p-0 m-0">
@@ -322,17 +329,17 @@ const Home = () => {
                 </section>
 
                 {/* Contact Form */}
-                <section className="fw-monospace my-5" id="contact">
+                <section className="fw-monospace my-5">
                     <div className="container">
                         <div className="row sub_content">
                             <div className="col-lg-6 mb-5" data-aos="fade-right" data-aos-duration="1000">
                                 <div className="dividerHeading mb-3">
                                     <h4 className="fs-3"><span>GET IN TOUCH</span></h4>
-                                    <div className="divider"><div className="color-nowidth"><div className="color-width"></div></div></div>
+                                    <div  style={{background:'none'}} className="divider"><div className="color-nowidth"><div className="color-width"></div></div></div>
                                 </div>
                                 
                                 <div>
-                                    <form ref={myForm} onSubmit={sendEmail} id="contactForm" action="">
+                                    <form ref={myForm} onSubmit={sendEmail} id="contact" action="">
                                         <div className="row">
                                             <div className="form-group">
                                                 <div className="col-12 mb-2">

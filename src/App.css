@@ -204,6 +204,14 @@ a:hover{
   list-style: none;
 }
 
+/*===============
+    ABOUT
+================*/
+.about-hero{
+  height: 20vh;
+  /* background-color: #8CBE46; */
+  background: url(./images/pattern-1.png);
+}
 /* Media query */
 @media only screen and (max-width: 480px){
   .scrollTop{

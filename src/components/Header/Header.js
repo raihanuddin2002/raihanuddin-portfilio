@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from "../../images/green.png";
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
     return (
@@ -21,10 +22,15 @@ const Header = () => {
                             <li className="nav-item text-center">
                                 <NavLink style={isActive => ({
                                     color: isActive ? "#8CBE46" : "white"
-                                })}className="nav-link fw-bold" to="/about">ABOUT</NavLink>
+                                })} className="nav-link fw-bold" to="/about">ABOUT</NavLink>
+                            </li>
+                            <li className="nav-item text-center">
+                                <NavLink style={isActive => ({
+                                    color: isActive ? "#8CBE46" : "white"
+                                })} className="nav-link fw-bold" to="/blog">BLOG</NavLink>
                             </li>
                             <li className="nav-item  text-center">
-                                <a className="nav-link fw-bold text-white" href="#contact">CONTACT</a>
+                                <HashLink className="nav-link fw-bold" to="/home#contact">CONTACT</HashLink>
                             </li> 
                         </ul>
                     </div>
