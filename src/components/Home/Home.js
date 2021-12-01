@@ -125,7 +125,7 @@ const Home = () => {
                                 I am a Jr Web Developer. I am a fresher in MERN stack. Recently I have finished MERN stack Course at Programming Hero. I am in web sector since 2018. I started my journey as a WordPress developer. Then I started learning PHP. After finishing PHP course then I got admission at Programming Hero and started learning MERN stack. I worked 3 small professional projects, 2 of projects in local marketplace and 1 project in Fiverr.
                             </p>
 
-                            <div className="pb_action" data-aos="zoom-in"  data-aos-duration="1000" >
+                            <div className="pb_action mb-4" data-aos="zoom-in"  data-aos-duration="1000" >
                                 <NavLink className="btn bg-light-green rounded-0 text-uppercase" to="/about">
                                     Read More <i class="fas fa-info-circle"></i>
                                 </NavLink>
@@ -137,7 +137,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <div className="for-scroll-top mb-2">
+            <div className="col-12 for-scroll-top mb-2">
                 {/* Projects */}
                 <section className="fw-monospace my-5">
                     <div className="container">
@@ -149,7 +149,7 @@ const Home = () => {
 
                             <div className="row row-cols-1 row-cols-md-2 g-4 p-0 m-0">
                                 {
-                                !isLoading && limitProjects.map(project => <Project key={project.count} data={project}></Project>)
+                                    !isLoading && limitProjects.map(project => <Project key={project.count} data={project}></Project>)
                                 }
                             </div>
                                 {
@@ -385,7 +385,7 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                            <div className="col-lg-6" data-aos="fade-down" data-aos-duration="1000">
                                 <div className="dividerHeading mb-3">
                                     <h4 className="fs-3"><span>CONTACT INFO</span></h4>
                                     <div className="divider mb-3"><div className="color-nowidth"><div className="color-width"></div></div></div>

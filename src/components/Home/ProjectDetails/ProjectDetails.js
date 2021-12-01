@@ -88,19 +88,19 @@ const ProjectDetails = () => {
                     {!isLoading && <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             {screenshorts[0] && <div className="carousel-item active text-center">
-                                <a href={screenshorts[0]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[0]} className="d-block mx-auto" alt="..."/></a>
+                                <a href={screenshorts[0]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[0]} className="d-block mx-auto img-fluid" alt="..."/></a>
                             </div>}
                             {screenshorts[1] && <div className="carousel-item">
-                                <a href={screenshorts[1]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[1]} className="d-block mx-auto" alt="..."/></a>
+                                <a href={screenshorts[1]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[1]} className="d-block mx-auto img-fluid" alt="..."/></a>
                             </div>}
                             {screenshorts[2] && <div className="carousel-item">
-                                <a href={screenshorts[2]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[2]} className="d-block mx-auto" alt="..."/></a>
+                                <a href={screenshorts[2]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[2]} className="d-block mx-auto img-fluid" alt="..."/></a>
                             </div>}
                             {screenshorts[3] && <div className="carousel-item">
                                 <a href={screenshorts[3]} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={screenshorts[3]} className="d-block mx-auto" alt="..."/></a>
                             </div>}
                             {picture && <div className="carousel-item">
-                                <a href={picture} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={picture} className="d-block mx-auto" alt="..."/></a>
+                                <a href={picture} target="_blank" rel="noopener noreferrer"><img style={{maxHeight: '80vh'}} src={picture} className="d-block mx-auto img-fluid" alt="..."/></a>
                             </div>}
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
