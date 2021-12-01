@@ -103,7 +103,7 @@ const Home = () => {
                         </div>
                         <div className="col-sm-3">
                             <div className="pb_action" data-aos="zoom-in"  data-aos-duration="1000" >
-                                <a className="btn btn-lg bg-light-green rounded-0" href="https://drive.google.com/file/d/1_8kC8PaCvuBD7s-CMhKGFZBERTtslEb6/view?usp=sharing" target="_blank">
+                                <a className="btn btn-lg bg-light-green rounded-0" href="https://drive.google.com/file/d/1Qge7xHY72B8g1d3trvmD0PZoo1ye_iRY/view?usp=sharing" target="_blank">
                                 <i className="fas fa-download"></i> Download
                                 </a>
                             </div>
